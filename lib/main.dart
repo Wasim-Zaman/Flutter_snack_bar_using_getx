@@ -20,12 +20,15 @@ class MyApp extends StatelessWidget {
               ElevatedButton(
                 onPressed: () {
                   Get.snackbar(
-                      'Alert', "You have forced the snake bar to be shown",
-                      snackPosition: SnackPosition.BOTTOM,
-                      // duration: const Duration(microseconds: 3000),
-                      overlayBlur: 3,
-                      margin: const EdgeInsets.all(10),
-                      padding: const EdgeInsets.all(5));
+                    'Alert', "You have forced the snake bar to be shown",
+                    snackPosition: SnackPosition.BOTTOM,
+                    // duration: const Duration(microseconds: 3000),
+                    overlayBlur: 3,
+                    // margin: const EdgeInsets.all(10),
+                    // padding: const EdgeInsets.all(5),
+                    isDismissible: true,
+                    dismissDirection: DismissDirection.down,
+                  );
                 },
                 child: const Text('Show Snake Bar'),
               )
